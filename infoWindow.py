@@ -1,0 +1,93 @@
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+from personality import *
+from kisi_bilgi import *
+class Ui_info_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(604, 433)
+        Dialog.setAccessibleName("")
+        self.label = QtWidgets.QLabel(Dialog)
+        self.label.setGeometry(QtCore.QRect(60, 30, 471, 31))
+        self.label.setObjectName("label")
+        self.groupBox = QtWidgets.QGroupBox(Dialog)
+        self.groupBox.setGeometry(QtCore.QRect(50, 80, 181, 301))
+        self.groupBox.setObjectName("groupBox")
+        self.widget = QtWidgets.QWidget(self.groupBox)
+        self.widget.setGeometry(QtCore.QRect(0, 30, 176, 134))
+        self.widget.setObjectName("widget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.pushButton_2 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.verticalLayout.addWidget(self.pushButton_2)
+        self.pushButton_4 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.verticalLayout.addWidget(self.pushButton_4)
+        self.pushButton = QtWidgets.QPushButton(self.widget)
+        self.pushButton.setObjectName("pushButton")
+        self.verticalLayout.addWidget(self.pushButton)
+        self.pushButton_3 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.verticalLayout.addWidget(self.pushButton_3)
+        self.groupBox_2 = QtWidgets.QGroupBox(Dialog)
+        self.groupBox_2.setGeometry(QtCore.QRect(240, 110, 331, 141))
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.groupBox_2)
+        self.lineEdit_2.setGeometry(QtCore.QRect(10, 30, 101, 21))
+        font = QtGui.QFont()
+        font.setBold(False)
+        font.setWeight(50)
+        self.lineEdit_2.setFont(font)
+        self.lineEdit_2.setReadOnly(True)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.label_2 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_2.setGeometry(QtCore.QRect(120, 30, 201, 20))
+        self.label_2.setObjectName("lablel_2")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.groupBox_2)
+        self.lineEdit_3.setGeometry(QtCore.QRect(10, 60, 101, 21))
+        self.lineEdit_3.setReadOnly(True)
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.label_3 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_3.setGeometry(QtCore.QRect(120, 60, 201, 20))
+        self.label_3.setObjectName("label_3")
+
+        self.pushButton_6Cancel = QtWidgets.QPushButton(Dialog)
+        self.pushButton_6Cancel.setGeometry(QtCore.QRect(450, 350, 114, 32))
+        self.pushButton_6Cancel.setObjectName("pushButton_6Cancel")
+        self.pushButton_5GoBack = QtWidgets.QPushButton(Dialog)
+        self.pushButton_5GoBack.setGeometry(QtCore.QRect(260, 350, 114, 32))
+        self.pushButton_5GoBack.setObjectName("pushButton_5GoBack")
+
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.label.setText(_translate("Dialog", "textlabel"))
+        self.groupBox.setTitle(_translate("Dialog", "GroupBox"))
+        self.pushButton_2.setText(_translate("Dialog", "Personality"))
+        self.pushButton_4.setText(_translate("Dialog", "University"))
+        self.pushButton.setText(_translate("Dialog", "library"))
+        self.pushButton_3.setText(_translate("Dialog", "Banking Amount"))
+        self.groupBox_2.setTitle(_translate("Dialog", "     Your Contact information"))
+        self.lineEdit_2.setText(_translate("Dialog", "Phone"))
+        self.label_2.setText(_translate("Dialog", "TextLabel"))
+        self.lineEdit_3.setText(_translate("Dialog", "E-mail address"))
+        self.label_3.setText(_translate("Dialog", "TextLabel"))
+        self.pushButton_6Cancel.setText(_translate("Dialog", "Cancel"))
+        self.pushButton_5GoBack.setText(_translate("Dialog", "Go back"))
+
+
+if __name__=='__main__':
+    import sys
+    app=QtWidgets.QApplication(sys.argv)
+    Dialog=QtWidgets.QDialog()
+    v1=Ui_info_Dialog()
+    v1.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec_())
