@@ -2,3 +2,4 @@
 ._.DS_Store
 .idea
 Student.db.bak
+__pycache__
